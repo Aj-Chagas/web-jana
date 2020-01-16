@@ -1,0 +1,82 @@
+/* ------------rodape --------------*/
+
+/*
+    *Extra Small <576px
+    *Small >= 576px
+    *Medium >= 768 px
+    *Large >= 992px
+    *Extra large >=1200px
+*/
+
+@media screen and (max-width: 576px){
+    h1{
+        font-size: 20px;
+    }
+    .btn-custom{
+        margin: 10px 15px;
+    }
+    .divisor{
+        visibility: hidden;
+    }
+    .texto-capa{
+        border: blue solid 1px;
+        text-align: center;
+        color: white;
+        display: table-cell;
+        vertical-align: middle; 
+        position: absolute;
+        top: 20%;
+        margin-left: 200px;
+    }
+}
+/* small*/
+@media screen and (min-width: 577px){
+    h1{
+        font-size: 30px;
+    }
+    .btn-custom{
+        margin: 10px 15px;
+    }
+    .texto-capa{
+        border: orange solid 1px;
+        text-align: center;
+        color: white;
+        display: table-cell;
+        vertical-align: middle; 
+        position: absolute;
+        top: 30%;
+        margin-left: 200px;
+    }
+}
+/* Large*/
+@media screen and (min-width: 992px){
+    h1{
+        font-size: 40px;
+    }
+    .texto-capa{
+        border: green solid 1px;
+        text-align: center;
+        color: white;
+        display: table-cell;
+        vertical-align: middle; 
+        position: absolute;
+        top: 30%;
+        margin-left: 200px;
+    }
+}
+/*Extra Large */
+@media screen and (min-width: 1200px){
+    h1{
+        font-size: 60px;
+    }
+    .texto-capa{
+        border: red solid 1px;
+        text-align: center;
+        color: white;
+        display: table-cell;
+        vertical-align: middle; 
+        position: absolute;
+        top: 40%;
+        margin-left: 200px;
+    }
+}
