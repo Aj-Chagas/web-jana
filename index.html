@@ -14,8 +14,9 @@
 
   <!-- Bootstrap -->
   <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-
-  <link href="estilo.css" rel="stylesheet">
+  <!--styles sheet-->
+  <link href="styles/estilo.css" rel="stylesheet">
+  <link href="styles/midiaQuery.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,14 +27,24 @@
 </head>
 
 <body>
-
   <nav class="navbar navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="icons/logo/navBrand.svg" width="150" height="150" alt="">
       </a>
-      <p><img src="icons/icons utilizados/NavBar/EMAIL.svg" width="32" height="32">&nbsp   jandeandrade@gmail.com <br>
-        <img src="icons/icons utilizados/NavBar/Whatsapp-color.svg" width="32" height="32"> &nbsp  (XX) XXXX-XXXX</p>
+      <p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">
+          <img src="icons/icons utilizados/NavBar/EMAIL.svg" width="32" height="32">&nbsp
+        </button>
+
+        <a href="https://api.whatsapp.com/send?phone=5511982113257&text=Hi!%20I'm%20teacher%20Jana!%20Como%20posso%20ajudar%3F">
+          <img src="icons/icons utilizados/NavBar/Whatsapp-color.svg" width="32" height="32"> &nbsp
+        </a>
+        <a href="https://www.linkedin.com/in/janaina-nino-78a898153/">
+          <img src="icons/outros/LinkedIn-color.svg" width="32" height="32"> &nbsp
+        </a>
+      </p>
     </div>
   </nav>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -47,7 +58,7 @@
           <a class="nav-link" href="#">Início<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Depoimentos</a>
+          <a class="nav-link" href="#carouselExampleCaptions">Depoimentos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contato</a>
@@ -59,22 +70,36 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="pt-4 my-md-1 pt-md-2 border-top"> </div>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Email</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="changeTextButtonFechar()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <a href="mailto:jandeandrade.nino@gmail.com">
+            <span id="emailCopy" class="copy_email">jandeandrade.nino@gmail.com</span>
+          </a> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="changeTextButtonFechar()">Fechar</button>
+          <button id="copyButton" type="button" class="btn btn-primary">Copiar email</button>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!--
-  <div class="capa">
-    <div class="texto-capa">
-      <h1 class="mr-1">VENHA ESTUDAR INGLÊS DA MANEIRA <BR>  VOCÊ PRECISA </h1>
-    </div>  
-  
-  </div>-->
+
   <div class="table">
-    <img class="img-fluid" src="capa/capaAppleVersion2.jpg">
+    <img class="img-fluid" src="capa/capaAppleVersion2.jpg">s
     <div class="container">
       <div class="texto-capa">
-        <h1>VENHA ESTUDAR INGLÊS DA MANEIRA QUE VOCÊ PRECISA</h1>
+        <h1>VENHA ESTUDAR INGLÊS DA MANEIRA <br> QUE VOCÊ PRECISA</h1>
       </div>
     </div>
   </div>
@@ -141,77 +166,92 @@
           <div class="ajuste">
             <h2 class="text-center m-4">Vantagens</h2>
             <ul class="list-inline list-unstyled">
-              <li class=" m-2"><img class="icons" src="icons/icons utilizados/SectionVantagens/sofa-6.svg">&nbsp Faça inglês no conforto da
+              <li class=" m-2"><img class="icons" src="icons/icons utilizados/SectionVantagens/sofa-6.svg">&nbsp Faça
+                inglês no conforto da
                 sua casa</li>
-              <li class=" m-2"><img class="icons" src="icons/icons utilizados/SectionVantagens/relax.svg">&nbsp Sem contrato fidelidades,
+              <li class=" m-2"><img class="icons" src="icons/icons utilizados/SectionVantagens/relax.svg">&nbsp Sem
+                contrato fidelidades,
                 sem multas, sem preocupação.</li>
               <li class=" m-2"><img class="icons"
-                  src="icons/icons utilizados/SectionVantagens/studentWithLaptopAnotherVersion.svg">&nbsp Aula experimental
+                  src="icons/icons utilizados/SectionVantagens/studentWithLaptopAnotherVersion.svg">&nbsp Aula
+                experimental
                 gratuita (30 Minutos).</li>
 
             </ul>
             <div class="m-5">
               <button class="btn btn-block btn-success">Agende sua aula!</button>
             </div>
-            
+
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active box_carousel">
+        <img src="Depoimentos/Anderson Alves da Silva/AndersonSilva.png" class="d-none  d-md-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Anderson Alves da Silva</h5>
+          <p>Ao ser contrato por uma multinacional americana , me desafiei aos 42 anos, aprender o inglês.
+            Com a metodologia e nítida dedicação, de quem faz o que gosta e, com seu jeito especial ao ensinar esse
+            aluno, tenho a certeza de ter feito a escolha certa.
+            " Feliz aquele que transfere o que sabe "
+            Anderson Alves</p>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="carousel-item box_carousel">
+        <img src="Depoimentos/Rafael Mendes/rafael.png" class="d-none  d-md-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Rafel Mendes</h5>
+          <p>Learning with Janaina is wonderful! In a few months, I improved a lot in your classes! I am happy to
+            participate and recommend it to all of you!</p>
+        </div>
+      </div>
+      <div class="carousel-item box_carousel">
+        <img src="Depoimentos/Daniel Caleone/Daniel Calone.png" class="d-none  d-md-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Daniel Calone </h5>
+          <p>Tenho aulas de ingles com a Janaína a algum tempo e posso dizer q e simplesmente incrível.
+            Eu nao gostava muito de estudar ingles, tinha muita dificuldade e o fato de nao ver evolucao me incomodava
+            muito, mas as aulas com a Janaína sao leves, de facil compreensão e entendimento e com isso minha diaposicao
+            para aprender ingles melhorou muito.
+            Ela tem um.metodo realmente funcional e sua alegria em fazer o que gosta e contagiante e isso me faz
+            aprender cada vez mais o ingles.
+            Sua pontualidade, comprometimento e vontade de ensinar é o que destaco no que mais me impressiona nas aulas
+            e mesmo fazendo aulas por Skype sao de uma qualidade incrivel.
+            Agradeço pela oportididade de aprender ingles com vc.
+            Obrigado
+          </p>
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-
-
-
-
 
 
   <div class="container">
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
       <div class="row">
         <div class="col-12 col-md">
+          <a class="navbar-brand" href="#">
+            <img src="icons/logo/navBrand.svg" width="150" height="150" alt="">
+          </a>
           <img class="mb-2" src="../../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-          <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+          <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
         </div>
         <div class="col-6 col-md">
           <h5>Features</h5>
@@ -251,6 +291,33 @@
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="bootstrap/js/bootstrap.min.js"></script>
-</body>
+  <script>    
+  document.getElementById("copyButton").addEventListener("click", copy_email);
 
+    function copy_email(){
+      var copyText = document.getElementById("emailCopy");
+      var textArea = document.createElement("textarea");
+      textArea.value = copyText.textContent;
+      document.getElementById("copyButton").appendChild(textArea);
+      textArea.select();
+      document.execCommand("Copy");
+      textArea.remove();
+      changeTextButtonCopiar()
+    }
+
+    function changeTextButtonCopiar() {
+      document.getElementById("copyButton").classList.remove('btn-primary')
+      var text = document.getElementById("copyButton").firstChild
+      text.data = "Email copiado"
+      document.getElementById("copyButton").classList.add('btn-success')
+    }
+
+    function changeTextButtonFechar(){
+      document.getElementById("copyButton").classList.remove('btn-success')
+      var text = document.getElementById("copyButton").firstChild
+      text.data = "Copiar email"
+      document.getElementById("copyButton").classList.add('btn-primary')
+    }
+  </script>
+</body>
 </html>
