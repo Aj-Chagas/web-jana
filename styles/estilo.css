@@ -76,7 +76,6 @@ body{
 }*/
 
 .texto-capa{
-    border: blue solid 1px;
     text-align: center;
     color: white;
     display: table-cell;
@@ -94,7 +93,6 @@ body{
 #videoApresentacao{
     background: white;
     padding: 20px 0 20px 0;
-    border: 1px solid blue;
 }
 
 .jana{
@@ -136,6 +134,13 @@ body{
 .box_carousel{
     height: 500px;
     background-color: #3c3b6e;
+}
+
+
+/*--------------------planos cards----------------*/
+
+.planos{
+    margin: 50px auto 50px 0;
 }
 
 

@@ -19,7 +19,6 @@
         visibility: hidden;
     }
     .texto-capa{
-        border: blue solid 1px;
         text-align: center;
         color: white;
         display: table-cell;
@@ -38,7 +37,6 @@
         margin: 10px 15px;
     }
     .texto-capa{
-        border: orange solid 1px;
         text-align: center;
         color: white;
         display: table-cell;
@@ -54,7 +52,6 @@
         font-size: 40px;
     }
     .texto-capa{
-        border: green solid 1px;
         text-align: center;
         color: white;
         display: table-cell;
@@ -70,7 +67,6 @@
         font-size: 60px;
     }
     .texto-capa{
-        border: red solid 1px;
         text-align: center;
         color: white;
         display: table-cell;
